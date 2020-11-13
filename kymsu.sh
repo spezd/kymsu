@@ -8,8 +8,8 @@ printf '%*s\n' "${COLUMNS}" '' | tr ' ' =
 
 SCRIPTS_DIR=$(cat ~/.kymsu/path)/plugins.d
 
-for script in $(ls $SCRIPTS_DIR); do
-  if [ -x "$SCRIPTS_DIR/$script" ]; then
-    $SCRIPTS_DIR/$script $@
+for script in "${SCRIPTS_DIR}"/*; do
+  if [ -x "${SCRIPTS_DIR}/${script}" ]; then
+    "${SCRIPTS_DIR}/${script}" "$@"
   fi
 done

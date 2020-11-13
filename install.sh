@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-KYMSU_PATH=`pwd`
+KYMSU_PATH=$(pwd)
 
 # Make Kymsu accessible in PATH
 ln -fs "${KYMSU_PATH}"/kymsu.sh /usr/local/bin/kymsu
