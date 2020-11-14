@@ -9,7 +9,7 @@ printf '%*s\n' "${COLUMNS}" '' | tr ' ' =
 SCRIPTS_DIR=$(cat ~/.kymsu/path)/plugins.d
 
 for script in "${SCRIPTS_DIR}"/*; do
-  if [ -x "${SCRIPTS_DIR}/${script}" ]; then
-    "${SCRIPTS_DIR}/${script}" "$@"
+  if [ -x "${script}" ]; then
+    "${script}" "$@"
   fi
 done
